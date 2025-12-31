@@ -27,8 +27,8 @@ const diamondExchangeSlice = createSlice({
             state.error = action.payload;
         },
 
-        // Track WhatsApp click
-        trackWhatsAppClick: (state, action: PayloadAction<number>) => {
+        // Track WhatsApp WhatsApp click
+        trackWhatsAppClick: (state, action: PayloadAction<string>) => {
             state.clickLoading = true;
         },
         trackWhatsAppClickSuccess: (state) => {

@@ -14,7 +14,7 @@ export const useWhatsApp = () => {
 
     const handleWhatsAppClick = (message = "Hi, I want to create a Diamond Exchange ID.") => {
         if (activeWhatsAppNumber) {
-            dispatch(trackWhatsAppClick(activeWhatsAppNumber.id as any));
+            dispatch(trackWhatsAppClick(activeWhatsAppNumber.id));
             const encodedMessage = encodeURIComponent(message);
             window.open(`https://wa.me/${activeWhatsAppNumber.number}?text=${encodedMessage}`, '_blank');
         } else {

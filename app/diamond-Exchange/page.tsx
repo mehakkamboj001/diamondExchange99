@@ -535,7 +535,7 @@ export default function DiamondExchangeLanding() {
                     zIndex: 1000,
                     boxShadow: '0 4px 20px rgba(37, 211, 102, 0.4)'
                 }}
-                onClick={handleWhatsAppClick}
+                onClick={() => handleWhatsAppClick()}
                 disabled={!activeWhatsAppNumber || loading}
             >
                 <WhatsAppIcon sx={{ fontSize: { xs: 24, md: 32 } }} />
