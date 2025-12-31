@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb+srv://ravichandora8:Y6FpJFtzI3tAiToa@de.5viz4zb.mongodb.net/diamond-exchange?retryWrites=true&w=majority&appName=DE';
+const MONGODB_URI = process.env.MONGODB_URI || 'mongodb+srv://mehakkamboj001_db_user:c6hmGPpWEzmxKOiK@diamondexchange99.7avhpkn.mongodb.net/diamond-exchange?retryWrites=true&w=majority&appName=diamondExchange99';
 
 if (!MONGODB_URI) {
     throw new Error('Please define the MONGODB_URI environment variable inside .env.local');
@@ -20,7 +20,7 @@ declare global {
     var mongoose: MongooseCache | undefined;
 }
 
-let cached: MongooseCache = global.mongoose || { conn: null, promise: null };
+const cached: MongooseCache = global.mongoose || { conn: null, promise: null };
 
 if (!global.mongoose) {
     global.mongoose = cached;
@@ -35,13 +35,16 @@ async function connectDB(): Promise<typeof mongoose> {
     if (!cached.promise) {
         const opts = {
             bufferCommands: false,
+            serverSelectionTimeoutMS: 10000, // 10 seconds timeout
+            socketTimeoutMS: 45000, // 45 seconds
         };
 
-        cached.promise = mongoose.connect(MONGODB_URI, opts).then((mongoose) => {
+        console.log('🔄 Connecting to MongoDB...');
+        cached.promise = mongoose.connect(MONGODB_URI, opts).then((mongooseInstance) => {
             console.log('✅ MongoDB connected successfully');
-            console.log('📊 Database:', mongoose.connection.db?.databaseName || 'N/A');
-            console.log('🔗 Host:', mongoose.connection.host);
-            return mongoose;
+            console.log('📊 Database:', mongooseInstance.connection.db?.databaseName || 'N/A');
+            console.log('🔗 Host:', mongooseInstance.connection.host);
+            return mongooseInstance;
         });
     }
 
