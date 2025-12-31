@@ -4,8 +4,10 @@ import { Box, Container, Typography, Grid, IconButton, Stack, Link as MuiLink } 
 import InstagramIcon from '@mui/icons-material/Instagram';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import Link from 'next/link';
+import { useWhatsApp } from '../src/hooks/useWhatsApp';
 
 export default function Footer() {
+    const { handleWhatsAppClick } = useWhatsApp();
     const paymentIcons = [
         { name: 'Bank Deposit', img: 'https://diamond247sports.com/assets/img/icon/bank.png' },
         { name: 'Bitcoin', img: 'https://diamond247sports.com/assets/img/icon/bitcoin.png' },
@@ -74,7 +76,10 @@ export default function Footer() {
                             {/* <IconButton sx={{ bgcolor: 'rgba(228, 176, 74, 0.1)', color: '#e4b04a', '&:hover': { bgcolor: '#e4b04a', color: '#000' } }}>
                                 <InstagramIcon fontSize="small" />
                             </IconButton> */}
-                            <IconButton sx={{ bgcolor: 'rgba(37, 211, 102, 0.1)', color: '#25D366', '&:hover': { bgcolor: '#25D366', color: '#fff' } }}>
+                            <IconButton
+                                onClick={() => handleWhatsAppClick()}
+                                sx={{ bgcolor: 'rgba(37, 211, 102, 0.1)', color: '#25D366', '&:hover': { bgcolor: '#25D366', color: '#fff' } }}
+                            >
                                 <WhatsAppIcon fontSize="small" />
                             </IconButton>
                         </Stack>

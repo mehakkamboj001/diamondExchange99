@@ -29,6 +29,8 @@ import SupportAgentIcon from '@mui/icons-material/SupportAgent';
 import SportsEsportsIcon from '@mui/icons-material/SportsEsports';
 import CardGiftcardIcon from '@mui/icons-material/CardGiftcard';
 
+import { useWhatsApp } from '../../src/hooks/useWhatsApp';
+
 const StatCard = ({ title, Icon, desc }: any) => (
     <Paper
         elevation={0}
@@ -117,19 +119,7 @@ const IDServiceCard = ({ title, subtitle, points, btnText }: any) => (
 
 export default function DiamondExchangeLanding() {
     const theme = useTheme();
-    const dispatch = useAppDispatch();
-    const { activeWhatsAppNumber, loading } = useAppSelector((state) => state.diamondExchange);
-
-    useEffect(() => {
-        dispatch(fetchActiveWhatsAppNumber());
-    }, [dispatch]);
-    console.log(activeWhatsAppNumber, "activeWhatsAppNumber")
-    const handleWhatsAppClick = () => {
-        if (activeWhatsAppNumber) {
-            dispatch(trackWhatsAppClick(activeWhatsAppNumber.id));
-            window.open(`https://wa.me/${activeWhatsAppNumber?.number}`, '_blank');
-        }
-    };
+    const { handleWhatsAppClick, loading, activeWhatsAppNumber } = useWhatsApp();
 
     return (
         <Box sx={{ bgcolor: '#0b0d17', minHeight: '100vh', color: '#fff', overflowX: 'hidden' }}>

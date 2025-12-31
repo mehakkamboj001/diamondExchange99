@@ -1,5 +1,5 @@
 export interface WhatsAppNumber {
-    id: number;
+    id: string;
     number: string;
     is_active: boolean;
     click_count: number;

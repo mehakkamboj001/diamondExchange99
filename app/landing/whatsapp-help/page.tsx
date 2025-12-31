@@ -5,9 +5,10 @@ import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import HeadsetMicIcon from '@mui/icons-material/SupportAgent';
 import QueryStatsIcon from '@mui/icons-material/QueryStats';
 
+import { useWhatsApp } from '../../../src/hooks/useWhatsApp';
+
 export default function WhatsAppHelpPage() {
-    const whatsappNumber = "+919000000000"; // Example number
-    const whatsappLink = `https://wa.me/${whatsappNumber}?text=Hi, I need help with Diamond Exchange ID.`;
+    const { handleWhatsAppClick } = useWhatsApp();
 
     return (
         <Box sx={{ bgcolor: 'background.default', minHeight: '80vh', py: 8 }}>
@@ -44,8 +45,7 @@ export default function WhatsAppHelpPage() {
                     <Button
                         variant="contained"
                         size="large"
-                        href={whatsappLink}
-                        target="_blank"
+                        onClick={() => handleWhatsAppClick("Hi, I need help with Diamond Exchange ID.")}
                         sx={{
                             bgcolor: '#25D366',
                             color: 'white',

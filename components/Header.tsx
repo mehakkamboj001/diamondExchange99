@@ -22,13 +22,13 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import TelegramIcon from '@mui/icons-material/Telegram';
 import MenuIcon from '@mui/icons-material/Menu';
 import Link from 'next/link';
+import { useWhatsApp } from '../src/hooks/useWhatsApp';
 
 export default function Header() {
     const [mobileOpen, setMobileOpen] = useState(false);
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('md'));
-
-    const whatsappLink = "https://wa.me/+919000000000?text=Hi, I want to create a Diamond Exchange ID.";
+    const { handleWhatsAppClick, whatsappLink } = useWhatsApp();
 
     const navItems = ['Home', 'Our Games', 'Our Promoter', 'Partners', 'FAQ'];
 
@@ -47,9 +47,12 @@ export default function Header() {
                     <ListItem key={item} disablePadding>
                         <ListItemText
                             primary={
-                                <Link href={whatsappLink} target="_blank" style={{ textDecoration: 'none', color: '#fff', display: 'block', padding: '10px 0', fontSize: '1rem', fontWeight: 500 }}>
+                                <Box
+                                    onClick={() => handleWhatsAppClick()}
+                                    sx={{ cursor: 'pointer', color: '#fff', display: 'block', padding: '10px 0', fontSize: '1rem', fontWeight: 500 }}
+                                >
                                     {item}
-                                </Link>
+                                </Box>
                             }
                         />
                     </ListItem>
@@ -58,8 +61,7 @@ export default function Header() {
             <Button
                 variant="contained"
                 fullWidth
-                href={whatsappLink}
-                target="_blank"
+                onClick={() => handleWhatsAppClick()}
                 sx={{
                     mt: 2,
                     bgcolor: '#e4b04a',
@@ -82,7 +84,7 @@ export default function Header() {
                         <Stack direction="row" spacing={1} alignItems="center">
                             <Typography variant="body2" sx={{ color: 'rgba(255,255,255,0.7)', fontWeight: 500, display: { xs: 'none', sm: 'block' } }}>Reach Us :</Typography>
                             <Stack direction="row" spacing={0.5}>
-                                <IconButton size="small" sx={{ color: '#e4b04a' }} href={whatsappLink} target="_blank">
+                                <IconButton size="small" sx={{ color: '#e4b04a' }} onClick={() => handleWhatsAppClick()}>
                                     <WhatsAppIcon fontSize="small" />
                                 </IconButton>
                             </Stack>
@@ -123,8 +125,7 @@ export default function Header() {
                         <Button
                             variant="outlined"
                             size="small"
-                            href={whatsappLink}
-                            target="_blank"
+                            onClick={() => handleWhatsAppClick()}
                             sx={{
                                 color: '#e4b04a',
                                 borderColor: '#e4b04a',
@@ -143,8 +144,7 @@ export default function Header() {
                         <Button
                             variant="outlined"
                             size="small"
-                            href={whatsappLink}
-                            target="_blank"
+                            onClick={() => handleWhatsAppClick()}
                             sx={{
                                 color: '#e4b04a',
                                 borderColor: '#e4b04a',
@@ -177,22 +177,22 @@ export default function Header() {
                     {/* Desktop Menu */}
                     <Stack direction="row" spacing={4} sx={{ display: { xs: 'none', md: 'flex' } }}>
                         {navItems.map((item) => (
-                            <Link
+                            <Box
                                 key={item}
-                                href={whatsappLink}
-                                target="_blank"
-                                style={{
-                                    textDecoration: 'none',
+                                onClick={() => handleWhatsAppClick()}
+                                sx={{
+                                    cursor: 'pointer',
                                     color: '#fff',
                                     fontSize: '15px',
                                     fontWeight: 600,
                                     textTransform: 'uppercase',
                                     letterSpacing: 0.5,
                                     transition: 'color 0.3s ease',
+                                    '&:hover': { color: '#e4b04a' }
                                 }}
                             >
                                 {item}
-                            </Link>
+                            </Box>
                         ))}
                     </Stack>
 
