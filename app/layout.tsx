@@ -15,7 +15,7 @@ const siteConfig = {
 };
 
 export const metadata: Metadata = {
-   verification: {
+  verification: {
     google: "56155c3d3cff61b4",
   },
   metadataBase: new URL(siteConfig.url),
