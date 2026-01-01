@@ -136,11 +136,11 @@ export default function DiamondExchangeClient() {
                 overflow: 'hidden'
             }}>
                 <Image
-                    src="/images/hero_replica.png"
+                    src="/images/hero.png"
                     alt="Diamond Exchange Hero Background"
                     fill
                     priority
-                    style={{ objectFit: 'cover', zIndex: 0, opacity: 0.5 }}
+                    style={{ objectFit: 'cover', zIndex: 0 }}
                 />
                 <Container maxWidth="xl" sx={{ position: 'relative', zIndex: 2 }}>
                     <Stack spacing={3} sx={{ maxWidth: 850, color: '#fff', py: { xs: 8, sm: 12, md: 0 }, px: { xs: 2, md: 0 } }}>
@@ -340,12 +340,12 @@ export default function DiamondExchangeClient() {
                 borderTop: '1px solid rgba(228, 176, 74, 0.1)',
                 borderBottom: '1px solid rgba(228, 176, 74, 0.1)'
             }}>
-                <Image
-                    src="/images/stat_bg.png"
+                {/* <Image
+                    src="/images/hero.png"
                     alt="Statistics Background"
                     fill
                     style={{ objectFit: 'cover', zIndex: 0, opacity: 0.1 }}
-                />
+                /> */}
                 <Container maxWidth="xl" sx={{ position: 'relative', zIndex: 1 }}>
                     <Grid container spacing={3}>
                         <Grid size={{ xs: 12, sm: 6, md: 3 }}>

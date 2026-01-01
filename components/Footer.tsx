@@ -8,17 +8,6 @@ import { useWhatsApp } from '../src/hooks/useWhatsApp';
 
 export default function Footer() {
     const { handleWhatsAppClick } = useWhatsApp();
-    const paymentIcons = [
-        { name: 'Bank Deposit', img: 'https://diamond247sports.com/assets/img/icon/bank.png' },
-        { name: 'Bitcoin', img: 'https://diamond247sports.com/assets/img/icon/bitcoin.png' },
-        { name: 'Paytm', img: 'https://diamond247sports.com/assets/img/icon/paytm.png' },
-        { name: 'PhonePe', img: 'https://diamond247sports.com/assets/img/icon/phone-pe.png' },
-        { name: 'GPay', img: 'https://diamond247sports.com/assets/img/icon/gpay.png' },
-        { name: 'UPI', img: 'https://diamond247sports.com/assets/img/icon/upi.png' },
-        { name: 'PayPal', img: 'https://diamond247sports.com/assets/img/icon/paypal.png' },
-        { name: 'Ether', img: 'https://diamond247sports.com/assets/img/icon/ether.png' },
-        { name: 'USDT', img: 'https://diamond247sports.com/assets/img/icon/usdt.png' },
-    ];
 
     const linkSections = [
         {

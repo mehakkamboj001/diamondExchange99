@@ -25,8 +25,8 @@ export default function RootRedirectPage() {
       color: 'white'
     }}>
       <Stack spacing={3} alignItems="center">
-        <DiamondIcon sx={{ fontSize: 60, color: 'primary.main', mb: 1 }} className="animate-pulse" />
-        <CircularProgress size={40} thickness={4} sx={{ color: 'primary.main' }} />
+        <DiamondIcon sx={{ fontSize: 60, color: '#e4b04a', mb: 1 }} className="animate-pulse" />
+        <CircularProgress size={40} thickness={4} sx={{ color: '#e4b04a' }} />
         <Typography variant="h6" sx={{ opacity: 0.8, letterSpacing: 2, fontWeight: 300 }}>
           LOADING DIAMOND EXCHANGE...
         </Typography>
