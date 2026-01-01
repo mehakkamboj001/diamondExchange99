@@ -42,9 +42,9 @@ export const metadata: Metadata = {
     },
   ],
   creator: "Diamond Exchange Team",
-  icons: {
-    icon: "/images/hero.png",
-  },
+  // icons: {
+  //   icon: "/images/hero.png",
+  // },
   manifest: `/site.webmanifest`,
 };
 
@@ -53,7 +53,7 @@ const jsonLd = {
   "@type": "Organization",
   "name": "Diamond Exchange99",
   "url": siteConfig.url,
-  "logo": `${siteConfig.url}/logo.png`,
+  "logo": `${siteConfig.url}/images/hero.png`,
   "description": siteConfig.description,
   "contactPoint": {
     "@type": "ContactPoint",
