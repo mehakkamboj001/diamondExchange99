@@ -23,38 +23,6 @@ const sampleNumbers = [
         click_count: 0,
         last_reset_at: new Date()
     },
-    {
-        number: '919876543211',
-        is_active: true,
-        max_clicks: 150,
-        hours_limit: 12,
-        click_count: 0,
-        last_reset_at: new Date()
-    },
-    {
-        number: '919876543212',
-        is_active: true,
-        max_clicks: 300,
-        hours_limit: 48,
-        click_count: 0,
-        last_reset_at: new Date()
-    },
-    {
-        number: '919876543213',
-        is_active: false,
-        max_clicks: 200,
-        hours_limit: 24,
-        click_count: 0,
-        last_reset_at: new Date()
-    },
-    {
-        number: '919876543214',
-        is_active: true,
-        max_clicks: 100,
-        hours_limit: 6,
-        click_count: 0,
-        last_reset_at: new Date()
-    },
 ];
 
 async function seedDatabase() {

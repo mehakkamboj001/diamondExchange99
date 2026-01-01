@@ -23,7 +23,7 @@ export default function Footer() {
     const linkSections = [
         {
             title: 'Our Partners',
-            links: []
+            links: ["A", "B", "C"]
         },
         {
             title: 'Top Betting Links',
@@ -66,19 +66,17 @@ export default function Footer() {
                 <Grid container spacing={4}>
                     {/* Brand Info */}
                     <Grid size={{ xs: 12, md: 3 }}>
-                        <Typography variant="h5" fontWeight="900" sx={{ mb: 2, color: '#fff', letterSpacing: 1 }}>
+                        <Typography variant="h5" component="h2" fontWeight="900" sx={{ mb: 2, color: '#fff', letterSpacing: 1 }}>
                             DIAMOND <Box component="span" sx={{ color: '#e4b04a' }}>EXCHANGE99</Box>
                         </Typography>
                         <Typography variant="body2" sx={{ opacity: 0.6, mb: 3, lineHeight: 1.8, fontSize: '0.9rem' }}>
                             Diamond Exchange99 is the world's leading sports exchange and betting platform. Established in 2003, providing secure and transparent gaming.
                         </Typography>
                         <Stack direction="row" spacing={1.5}>
-                            {/* <IconButton sx={{ bgcolor: 'rgba(228, 176, 74, 0.1)', color: '#e4b04a', '&:hover': { bgcolor: '#e4b04a', color: '#000' } }}>
-                                <InstagramIcon fontSize="small" />
-                            </IconButton> */}
                             <IconButton
                                 onClick={() => handleWhatsAppClick()}
                                 sx={{ bgcolor: 'rgba(37, 211, 102, 0.1)', color: '#25D366', '&:hover': { bgcolor: '#25D366', color: '#fff' } }}
+                                aria-label="Contact support on WhatsApp"
                             >
                                 <WhatsAppIcon fontSize="small" />
                             </IconButton>
@@ -87,24 +85,26 @@ export default function Footer() {
 
                     {/* Links */}
                     {linkSections.map((section) => (
-                        <Grid size={{ xs: 6, md: 3 }} key={section.title}>
-                            <Typography variant="subtitle1" fontWeight="bold" sx={{ mb: 3, color: '#e4b04a', textTransform: 'uppercase', fontSize: '0.85rem', letterSpacing: 1 }}>
+                        <Grid size={{ xs: 6, md: 3 }} key={section.title} component="nav" aria-label={section.title}>
+                            <Typography variant="subtitle1" component="h3" fontWeight="bold" sx={{ mb: 3, color: '#e4b04a', textTransform: 'uppercase', fontSize: '0.85rem', letterSpacing: 1 }}>
                                 {section.title}
                             </Typography>
-                            <Stack spacing={1.5}>
+                            <Stack spacing={1.5} component="ul" sx={{ listStyle: 'none', p: 0, m: 0 }}>
                                 {section.links.map((link) => (
-                                    <Link
-                                        key={link}
-                                        href="#"
-                                        style={{
-                                            color: 'rgba(255,255,255,0.7)',
-                                            textDecoration: 'none',
-                                            fontSize: '14px',
-                                            transition: 'all 0.2s ease'
-                                        }}
-                                    >
-                                        {link}
-                                    </Link>
+                                    <Box component="li" key={link}>
+                                        <Link
+                                            href="#"
+                                            style={{
+                                                color: 'rgba(255,255,255,0.7)',
+                                                textDecoration: 'none',
+                                                fontSize: '14px',
+                                                transition: 'all 0.2s ease'
+                                            }}
+                                            title={`Go to ${link}`}
+                                        >
+                                            {link}
+                                        </Link>
+                                    </Box>
                                 ))}
                             </Stack>
                         </Grid>

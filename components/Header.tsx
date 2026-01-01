@@ -76,7 +76,7 @@ export default function Header() {
     );
 
     return (
-        <AppBar position="sticky" elevation={0} sx={{ bgcolor: '#0b0d17', borderBottom: '1px solid rgba(228, 176, 74, 0.2)' }}>
+        <AppBar component="header" position="sticky" elevation={0} sx={{ bgcolor: '#0b0d17', borderBottom: '1px solid rgba(228, 176, 74, 0.2)' }}>
             {/* Top Bar */}
             <Box sx={{ bgcolor: 'rgba(0,0,0,0.3)', borderBottom: '1px solid rgba(228, 176, 74, 0.1)', py: 1 }}>
                 <Container maxWidth="xl">
@@ -84,7 +84,12 @@ export default function Header() {
                         <Stack direction="row" spacing={1} alignItems="center">
                             <Typography variant="body2" sx={{ color: 'rgba(255,255,255,0.7)', fontWeight: 500, display: { xs: 'none', sm: 'block' } }}>Reach Us :</Typography>
                             <Stack direction="row" spacing={0.5}>
-                                <IconButton size="small" sx={{ color: '#e4b04a' }} onClick={() => handleWhatsAppClick()}>
+                                <IconButton
+                                    size="small"
+                                    sx={{ color: '#e4b04a' }}
+                                    onClick={() => handleWhatsAppClick()}
+                                    aria-label="Contact on WhatsApp"
+                                >
                                     <WhatsAppIcon fontSize="small" />
                                 </IconButton>
                             </Stack>
@@ -112,7 +117,7 @@ export default function Header() {
                                 px: 2,
                                 display: 'inline-block'
                             }}>
-                                • Start With Us
+                                • Start With Us • Join India's Most Trusted Sports Exchange • 24/7 Withdrawals Available
                             </Box>
                             <style>{`
                                 @keyframes marquee {
@@ -137,6 +142,7 @@ export default function Header() {
                                 '&:hover': { bgcolor: 'rgba(228, 176, 74, 0.1)', borderColor: '#e4b04a' },
                                 marginRight: 1
                             }}
+                            aria-label="Login to your account"
                         >
                             Login
                         </Button>
@@ -155,6 +161,7 @@ export default function Header() {
                                 display: { xs: 'none', sm: 'flex' },
                                 '&:hover': { bgcolor: 'rgba(228, 176, 74, 0.1)', borderColor: '#e4b04a' }
                             }}
+                            aria-label="Register for a new Diamond Exchange ID"
                         >
                             SIGN UP
                         </Button>
@@ -164,10 +171,10 @@ export default function Header() {
 
             {/* Main Nav */}
             <Container maxWidth="xl">
-                <Toolbar disableGutters sx={{ minHeight: { xs: '50px !important', md: '70px !important' } }}>
-                    <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: 8, textDecoration: 'none', color: 'inherit' }}>
+                <Toolbar component="nav" disableGutters sx={{ minHeight: { xs: '50px !important', md: '70px !important' } }}>
+                    <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: 8, textDecoration: 'none', color: 'inherit' }} title="Diamond Exchange Home">
                         <DiamondIcon sx={{ color: '#e4b04a', fontSize: { xs: 24, md: 32 } }} />
-                        <Typography variant="h6" fontWeight="900" sx={{ color: '#fff', letterSpacing: 1, fontSize: { xs: '1.1rem', md: '1.4rem' } }}>
+                        <Typography variant="h6" component="h2" fontWeight="900" sx={{ color: '#fff', letterSpacing: 1, fontSize: { xs: '1.1rem', md: '1.4rem' } }}>
                             DIAMOND <Box component="span" sx={{ color: '#e4b04a' }}>EXCH</Box>
                         </Typography>
                     </Link>
@@ -190,6 +197,7 @@ export default function Header() {
                                     transition: 'color 0.3s ease',
                                     '&:hover': { color: '#e4b04a' }
                                 }}
+                                aria-label={`View ${item} page`}
                             >
                                 {item}
                             </Box>

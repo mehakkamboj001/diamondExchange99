@@ -3,18 +3,19 @@ import { MetadataRoute } from 'next';
 export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
+    const baseUrl = 'https://www.daimondexch99.online';
     return [
         {
-            url: 'https://diamondexchange.com',
+            url: baseUrl,
             lastModified: new Date(),
-            changeFrequency: 'yearly',
+            changeFrequency: 'daily',
             priority: 1,
         },
         {
-            url: 'https://diamondexchange.com/about',
+            url: `${baseUrl}/diamond-Exchange`,
             lastModified: new Date(),
-            changeFrequency: 'monthly',
-            priority: 0.8,
+            changeFrequency: 'daily',
+            priority: 0.9,
         },
     ];
 }

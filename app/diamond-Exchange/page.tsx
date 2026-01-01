@@ -29,11 +29,13 @@ import SupportAgentIcon from '@mui/icons-material/SupportAgent';
 import SportsEsportsIcon from '@mui/icons-material/SportsEsports';
 import CardGiftcardIcon from '@mui/icons-material/CardGiftcard';
 
+import Image from 'next/image';
 import { useWhatsApp } from '../../src/hooks/useWhatsApp';
 
 const StatCard = ({ title, Icon, desc }: any) => (
     <Paper
         elevation={0}
+        component="article"
         sx={{
             p: 3,
             textAlign: 'center',
@@ -54,16 +56,16 @@ const StatCard = ({ title, Icon, desc }: any) => (
             }
         }}
     >
-        <Icon sx={{ fontSize: 60, color: '#e4b04a', mb: 1, filter: 'drop-shadow(0 0 5px rgba(228, 176, 74, 0.5))' }} />
-        <Typography variant="h6" fontWeight="bold" color="#e4b04a">{title}</Typography>
+        <Icon sx={{ fontSize: 60, color: '#e4b04a', mb: 1, filter: 'drop-shadow(0 0 5px rgba(228, 176, 74, 0.5))' }} aria-hidden="true" />
+        <Typography variant="h6" component="h3" fontWeight="bold" color="#e4b04a">{title}</Typography>
         <Typography variant="body2" color="rgba(255,255,255,0.7)">{desc}</Typography>
     </Paper>
 );
 
 const StepCard = ({ number, title, desc }: any) => (
-    <Box sx={{ position: 'relative', p: 3, bgcolor: 'rgba(255,255,255,0.03)', borderRadius: 4, borderLeft: '4px solid #e4b04a' }}>
-        <Typography variant="h2" sx={{ position: 'absolute', right: 20, top: 10, opacity: 0.05, fontWeight: 900 }}>{number}</Typography>
-        <Typography variant="h6" fontWeight="bold" color="#e4b04a" gutterBottom>{title}</Typography>
+    <Box component="article" sx={{ position: 'relative', p: 3, bgcolor: 'rgba(255,255,255,0.03)', borderRadius: 4, borderLeft: '4px solid #e4b04a' }}>
+        <Typography variant="h2" component="span" sx={{ position: 'absolute', right: 20, top: 10, opacity: 0.05, fontWeight: 900 }} aria-hidden="true">{number}</Typography>
+        <Typography variant="h6" component="h3" fontWeight="bold" color="#e4b04a" gutterBottom>{title}</Typography>
         <Typography variant="body2" color="rgba(255,255,255,0.7)">{desc}</Typography>
     </Box>
 );
@@ -71,6 +73,7 @@ const StepCard = ({ number, title, desc }: any) => (
 const IDServiceCard = ({ title, subtitle, points, btnText }: any) => (
     <Paper
         elevation={0}
+        component="article"
         sx={{
             p: 4,
             height: '100%',
@@ -103,13 +106,13 @@ const IDServiceCard = ({ title, subtitle, points, btnText }: any) => (
         }}>
             {btnText}
         </Box>
-        <Typography variant="h5" align="center" fontWeight="900" sx={{ mb: 1, color: '#fff' }}>{title}</Typography>
+        <Typography variant="h5" component="h3" align="center" fontWeight="900" sx={{ mb: 1, color: '#fff' }}>{title}</Typography>
         <Typography variant="subtitle2" align="center" sx={{ mb: 4, color: '#e4b04a', fontWeight: 600 }}>{subtitle}</Typography>
 
         <Stack spacing={2} sx={{ mb: 3, flexGrow: 1 }}>
             {points.map((point: string) => (
                 <Stack key={point} direction="row" spacing={1.5} alignItems="flex-start">
-                    <Box sx={{ width: 6, height: 6, bgcolor: '#e4b04a', borderRadius: '2px', mt: 1, boxShadow: '0 0 8px rgba(228, 176, 74, 0.5)' }} />
+                    <Box sx={{ width: 6, height: 6, bgcolor: '#e4b04a', borderRadius: '2px', mt: 1, boxShadow: '0 0 8px rgba(228, 176, 74, 0.5)' }} aria-hidden="true" />
                     <Typography variant="body2" sx={{ color: 'rgba(255,255,255,0.8)', lineHeight: 1.5 }}>{point}</Typography>
                 </Stack>
             ))}
@@ -122,21 +125,26 @@ export default function DiamondExchangeLanding() {
     const { handleWhatsAppClick, loading, activeWhatsAppNumber } = useWhatsApp();
 
     return (
-        <Box sx={{ bgcolor: '#0b0d17', minHeight: '100vh', color: '#fff', overflowX: 'hidden' }}>
+        <Box component="main" sx={{ bgcolor: '#0b0d17', minHeight: '100vh', color: '#fff', overflowX: 'hidden' }}>
             {/* Hero Section */}
-            <Box sx={{
+            <Box component="section" sx={{
                 position: 'relative',
                 height: { xs: 'auto', md: '600px' },
-                background: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("/images/hero_replica.png")`,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
                 display: 'flex',
                 alignItems: 'center',
-                pt: { xs: 8, md: 0 }
+                pt: { xs: 8, md: 0 },
+                overflow: 'hidden'
             }}>
+                <Image
+                    src="/images/hero_replica.png"
+                    alt="Diamond Exchange Hero Background"
+                    fill
+                    priority
+                    style={{ objectFit: 'cover', zIndex: 0, opacity: 0.5 }}
+                />
                 <Container maxWidth="xl" sx={{ position: 'relative', zIndex: 2 }}>
                     <Stack spacing={3} sx={{ maxWidth: 850, color: '#fff', py: { xs: 8, sm: 12, md: 0 }, px: { xs: 2, md: 0 } }}>
-                        <Typography variant="h2" fontWeight="900" sx={{
+                        <Typography variant="h2" component="h1" fontWeight="900" sx={{
                             lineHeight: 1.1,
                             textTransform: 'uppercase',
                             fontSize: { xs: '2rem', sm: '3.5rem', md: '4.5rem' },
@@ -144,15 +152,25 @@ export default function DiamondExchangeLanding() {
                         }}>
                             Experience Ultimate Betting With <Box component="span" sx={{ color: '#e4b04a' }}>Diamond Exchange99</Box>
                         </Typography>
-                        <Typography variant="h4" fontWeight="bold" sx={{ fontSize: { xs: '1.5rem', md: '2rem' }, color: '#fff', opacity: 0.9 }}>
+                        <Typography variant="h4" component="p" fontWeight="bold" sx={{ fontSize: { xs: '1.5rem', md: '2rem' }, color: '#fff', opacity: 0.9 }}>
                             India's Premier 24/7 Gaming Destination
                         </Typography>
-                        <Box sx={{ width: 120, height: 6, bgcolor: '#e4b04a', borderRadius: 3 }} />
+                        <Box sx={{ width: 120, height: 6, bgcolor: '#e4b04a', borderRadius: 3 }} aria-hidden="true" />
                         <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2} sx={{ mt: 2 }}>
-                            <Button variant="contained" sx={{ bgcolor: '#e4b04a', color: '#000', fontWeight: 'bold', px: 4, py: 1.5, fontSize: '1.1rem', '&:hover': { bgcolor: '#c99a3b' } }}>
+                            <Button
+                                variant="contained"
+                                onClick={() => handleWhatsAppClick()}
+                                sx={{ bgcolor: '#e4b04a', color: '#000', fontWeight: 'bold', px: 4, py: 1.5, fontSize: '1.1rem', '&:hover': { bgcolor: '#c99a3b' } }}
+                                aria-label="Get your betting ID now"
+                            >
                                 Get Your ID Now
                             </Button>
-                            <Button variant="outlined" sx={{ color: '#fff', borderColor: '#fff', px: 4, py: 1.5, fontSize: '1.1rem', '&:hover': { borderColor: '#e4b04a', color: '#e4b04a' } }}>
+                            <Button
+                                variant="outlined"
+                                onClick={() => handleWhatsAppClick()}
+                                sx={{ color: '#fff', borderColor: '#fff', px: 4, py: 1.5, fontSize: '1.1rem', '&:hover': { borderColor: '#e4b04a', color: '#e4b04a' } }}
+                                aria-label="Learn more about our services"
+                            >
                                 Learn More
                             </Button>
                         </Stack>
@@ -215,9 +233,9 @@ export default function DiamondExchangeLanding() {
             </Box>
 
             {/* How to Get Started */}
-            <Box sx={{ py: { xs: 8, md: 12 }, bgcolor: '#0b0d17' }}>
+            <Box component="section" sx={{ py: { xs: 8, md: 12 }, bgcolor: '#0b0d17' }}>
                 <Container maxWidth="xl">
-                    <Typography variant="h3" textAlign="center" fontWeight="900" color="#e4b04a" gutterBottom sx={{ mb: 8 }}>
+                    <Typography variant="h3" component="h2" textAlign="center" fontWeight="900" color="#e4b04a" gutterBottom sx={{ mb: 8 }}>
                         Start Your Journey in 4 Simple Steps
                     </Typography>
                     <Grid container spacing={3}>
@@ -254,7 +272,7 @@ export default function DiamondExchangeLanding() {
             </Box>
 
             {/* Professional ID Solutions Section */}
-            <Box sx={{ py: { xs: 8, md: 12 }, bgcolor: '#0b0d17', position: 'relative', overflow: 'hidden' }}>
+            <Box component="section" sx={{ py: { xs: 8, md: 12 }, bgcolor: '#0b0d17', position: 'relative', overflow: 'hidden' }}>
                 <Box sx={{
                     position: 'absolute',
                     top: '50%',
@@ -264,9 +282,9 @@ export default function DiamondExchangeLanding() {
                     height: '100%',
                     background: 'radial-gradient(circle, rgba(228, 176, 74, 0.05) 0%, transparent 70%)',
                     zIndex: 0
-                }} />
+                }} aria-hidden="true" />
                 <Container maxWidth="xl" sx={{ position: 'relative', zIndex: 1 }}>
-                    <Typography variant="h3" textAlign="center" fontWeight="900" color="#e4b04a" gutterBottom sx={{ mb: 8 }}>
+                    <Typography variant="h3" component="h2" textAlign="center" fontWeight="900" color="#e4b04a" gutterBottom sx={{ mb: 8 }}>
                         Professional Trading & Betting Solutions
                     </Typography>
 
@@ -315,15 +333,20 @@ export default function DiamondExchangeLanding() {
             </Box>
 
             {/* Stats Cards Section */}
-            <Box sx={{
+            <Box component="section" sx={{
+                position: 'relative',
                 py: { xs: 8, md: 12 },
-                background: `linear-gradient(rgba(11, 13, 23, 0.9), rgba(11, 13, 23, 0.9)), url("/images/stat_bg.png")`,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
+                overflow: 'hidden',
                 borderTop: '1px solid rgba(228, 176, 74, 0.1)',
                 borderBottom: '1px solid rgba(228, 176, 74, 0.1)'
             }}>
-                <Container maxWidth="xl">
+                <Image
+                    src="/images/stat_bg.png"
+                    alt="Statistics Background"
+                    fill
+                    style={{ objectFit: 'cover', zIndex: 0, opacity: 0.1 }}
+                />
+                <Container maxWidth="xl" sx={{ position: 'relative', zIndex: 1 }}>
                     <Grid container spacing={3}>
                         <Grid size={{ xs: 12, sm: 6, md: 3 }}>
                             <StatCard
@@ -416,10 +439,10 @@ export default function DiamondExchangeLanding() {
             </Box>
 
             {/* Diamond Exchange99 Gaming Section */}
-            <Box sx={{ py: { xs: 8, md: 12 }, bgcolor: '#0b0d17' }}>
+            <Box component="section" sx={{ py: { xs: 8, md: 12 }, bgcolor: '#0b0d17' }}>
                 <Container maxWidth="xl">
                     <Stack spacing={4} textAlign="center" sx={{ mb: 8 }}>
-                        <Typography variant="h3" fontWeight="900" color="#e4b04a">
+                        <Typography variant="h3" component="h2" fontWeight="900" color="#e4b04a">
                             Diamond Exchange99 Gaming Experience
                         </Typography>
                         <Typography variant="body1" sx={{ opacity: 0.8, fontSize: '1.2rem', maxWidth: 900, mx: 'auto' }}>
@@ -434,7 +457,7 @@ export default function DiamondExchangeLanding() {
                         boxShadow: '0 10px 40px rgba(0, 0, 0, 0.4)',
                         overflow: 'hidden'
                     }}>
-                        <Table>
+                        <Table aria-label="Gaming Categories and Popular Markets">
                             <TableHead>
                                 <TableRow sx={{ bgcolor: 'rgba(228, 176, 74, 0.1)' }}>
                                     <TableCell sx={{ color: '#e4b04a', fontWeight: 'bold', fontSize: '1.2rem', py: 3, borderBottom: '1px solid rgba(228, 176, 74, 0.2)' }}>
@@ -482,11 +505,11 @@ export default function DiamondExchangeLanding() {
             </Box>
 
             {/* Trust & Security Section */}
-            <Box sx={{ py: { xs: 8, md: 12 }, bgcolor: '#1c1f2b' }}>
+            <Box component="section" sx={{ py: { xs: 8, md: 12 }, bgcolor: '#1c1f2b' }}>
                 <Container maxWidth="xl">
                     <Stack spacing={4} textAlign="center" maxWidth={900} sx={{ mx: 'auto', mb: 8 }}>
-                        <SecurityIcon sx={{ fontSize: 60, color: '#e4b04a', alignSelf: 'center' }} />
-                        <Typography variant="h3" fontWeight="900" color="#e4b04a">Compromise-Free Security</Typography>
+                        <SecurityIcon sx={{ fontSize: 60, color: '#e4b04a', alignSelf: 'center' }} aria-hidden="true" />
+                        <Typography variant="h3" component="h2" fontWeight="900" color="#e4b04a">Compromise-Free Security</Typography>
                         <Typography variant="body1" sx={{ opacity: 0.8, fontSize: '1.2rem' }}>
                             We operate under a strict Curacao license, ensuring that every interaction on our platform is transparent and legally compliant. Our mandatory KYC process is designed to protect users from intruders and maintain a fair play atmosphere.
                         </Typography>
@@ -494,24 +517,24 @@ export default function DiamondExchangeLanding() {
 
                     <Grid container spacing={4}>
                         <Grid size={{ xs: 12, md: 4 }}>
-                            <Paper sx={{ p: 4, bgcolor: 'rgba(255,255,255,0.02)', height: '100%', borderRadius: 6, border: '1px solid rgba(255,255,255,0.05)' }}>
-                                <Typography variant="h5" fontWeight="bold" color="#e4b04a" gutterBottom>Rapid Payments</Typography>
+                            <Paper component="article" sx={{ p: 4, bgcolor: 'rgba(255,255,255,0.02)', height: '100%', borderRadius: 6, border: '1px solid rgba(255,255,255,0.05)' }}>
+                                <Typography variant="h5" component="h3" fontWeight="bold" color="#e4b04a" gutterBottom>Rapid Payments</Typography>
                                 <Typography variant="body1" sx={{ opacity: 0.7 }}>
                                     Experience the most convenient payment ecosystem in India. From traditional Net Banking to modern Cryptocurrencies, our withdrawals are processed with unmatched speed.
                                 </Typography>
                             </Paper>
                         </Grid>
                         <Grid size={{ xs: 12, md: 4 }}>
-                            <Paper sx={{ p: 4, bgcolor: 'rgba(255,255,255,0.02)', height: '100%', borderRadius: 6, border: '1px solid rgba(255,255,255,0.05)' }}>
-                                <Typography variant="h5" fontWeight="bold" color="#e4b04a" gutterBottom>Fair Wagering</Typography>
+                            <Paper component="article" sx={{ p: 4, bgcolor: 'rgba(255,255,255,0.02)', height: '100%', borderRadius: 6, border: '1px solid rgba(255,255,255,0.05)' }}>
+                                <Typography variant="h5" component="h3" fontWeight="bold" color="#e4b04a" gutterBottom>Fair Wagering</Typography>
                                 <Typography variant="body1" sx={{ opacity: 0.7 }}>
                                     Transparency is our core value. Our wagering requirements are designed to be fair and achievable, giving you a real shot at converting your bonuses into winnings.
                                 </Typography>
                             </Paper>
                         </Grid>
                         <Grid size={{ xs: 12, md: 4 }}>
-                            <Paper sx={{ p: 4, bgcolor: 'rgba(255,255,255,0.02)', height: '100%', borderRadius: 6, border: '1px solid rgba(255,255,255,0.05)' }}>
-                                <Typography variant="h5" fontWeight="bold" color="#e4b04a" gutterBottom>Live Interaction</Typography>
+                            <Paper component="article" sx={{ p: 4, bgcolor: 'rgba(255,255,255,0.02)', height: '100%', borderRadius: 6, border: '1px solid rgba(255,255,255,0.05)' }}>
+                                <Typography variant="h5" component="h3" fontWeight="bold" color="#e4b04a" gutterBottom>Live Interaction</Typography>
                                 <Typography variant="body1" sx={{ opacity: 0.7 }}>
                                     Switch seamlessly between local championships and international tournaments. Our platform offers a dynamic, real-time interface that keeps you in the heat of the action.
                                 </Typography>
@@ -537,6 +560,7 @@ export default function DiamondExchangeLanding() {
                 }}
                 onClick={() => handleWhatsAppClick()}
                 disabled={!activeWhatsAppNumber || loading}
+                aria-label="Chat with us on WhatsApp"
             >
                 <WhatsAppIcon sx={{ fontSize: { xs: 24, md: 32 } }} />
             </Fab>
