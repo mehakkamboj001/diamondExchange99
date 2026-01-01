@@ -43,7 +43,7 @@ export const metadata: Metadata = {
   ],
   creator: "Diamond Exchange Team",
   icons: {
-    icon: "/images/hero.pngo",
+    icon: "/images/hero.png",
   },
   manifest: `/site.webmanifest`,
 };
