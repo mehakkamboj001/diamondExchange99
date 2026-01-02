@@ -4,13 +4,13 @@ import { fetchActiveWhatsAppNumber, trackWhatsAppClick } from '../../app/diamond
 
 export const useWhatsApp = () => {
     const dispatch = useAppDispatch();
-    const { activeWhatsAppNumber, loading } = useAppSelector((state) => state.diamondExchange);
+    const { activeWhatsAppNumber, loading, fetched } = useAppSelector((state) => state.diamondExchange);
 
     useEffect(() => {
-        if (!activeWhatsAppNumber && !loading) {
+        if (!fetched && !loading) {
             dispatch(fetchActiveWhatsAppNumber());
         }
-    }, [dispatch, activeWhatsAppNumber, loading]);
+    }, [dispatch, fetched, loading]);
 
     const handleWhatsAppClick = (message = "Hi, I want to create a Diamond Exchange ID.") => {
         if (activeWhatsAppNumber) {

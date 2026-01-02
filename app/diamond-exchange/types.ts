@@ -10,6 +10,7 @@ export interface WhatsAppNumber {
 export interface DiamondExchangeState {
     activeWhatsAppNumber: WhatsAppNumber | null;
     loading: boolean;
+    fetched: boolean;
     error: string | null;
     clickLoading: boolean;
 }

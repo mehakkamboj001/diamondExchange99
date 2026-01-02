@@ -4,6 +4,7 @@ import { DiamondExchangeState, WhatsAppNumber } from './types';
 const initialState: DiamondExchangeState = {
     activeWhatsAppNumber: null,
     loading: false,
+    fetched: false,
     error: null,
     clickLoading: false,
 };
@@ -19,11 +20,13 @@ const diamondExchangeSlice = createSlice({
         },
         fetchActiveWhatsAppNumberSuccess: (state, action: PayloadAction<WhatsAppNumber>) => {
             state.loading = false;
+            state.fetched = true;
             state.activeWhatsAppNumber = action.payload;
             state.error = null;
         },
         fetchActiveWhatsAppNumberFailure: (state, action: PayloadAction<string>) => {
             state.loading = false;
+            state.fetched = true;
             state.error = action.payload;
         },
 
