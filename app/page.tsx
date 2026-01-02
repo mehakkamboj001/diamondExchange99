@@ -9,7 +9,7 @@ export default function RootRedirectPage() {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      router.push('/diamond-Exchange');
+      router.push('/diamond-exchange');
     }, 1500);
     return () => clearTimeout(timer);
   }, [router]);

@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useAppDispatch, useAppSelector } from '../redux/hooks';
-import { fetchActiveWhatsAppNumber, trackWhatsAppClick } from '../../app/diamond-Exchange/diamondExchangeSlice';
+import { fetchActiveWhatsAppNumber, trackWhatsAppClick } from '../../app/diamond-exchange/diamondExchangeSlice';
 
 export const useWhatsApp = () => {
     const dispatch = useAppDispatch();

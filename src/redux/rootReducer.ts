@@ -1,5 +1,5 @@
 import { combineReducers } from '@reduxjs/toolkit';
-import diamondExchangeReducer from '../../app/diamond-Exchange/diamondExchangeSlice';
+import diamondExchangeReducer from '../../app/diamond-exchange/diamondExchangeSlice';
 
 const rootReducer = combineReducers({
     diamondExchange: diamondExchangeReducer,

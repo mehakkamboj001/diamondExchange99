@@ -12,7 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
             priority: 1,
         },
         {
-            url: `${baseUrl}/diamond-Exchange`,
+            url: `${baseUrl}/diamond-exchange`,
             lastModified: new Date(),
             changeFrequency: 'daily',
             priority: 0.9,

@@ -1,5 +1,5 @@
 import { all } from 'redux-saga/effects';
-import diamondExchangeSaga from '../../app/diamond-Exchange/diamondExchangeSaga';
+import diamondExchangeSaga from '../../app/diamond-exchange/diamondExchangeSaga';
 
 export default function* rootSaga() {
     yield all([

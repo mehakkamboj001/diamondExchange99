@@ -6,7 +6,7 @@ export const metadata: Metadata = {
     description: 'Get your official Diamond Exchange access key instantly. Join India\'s most trusted sports analysis platform with secure settlements, 24/7 support, and elite performance tracking.',
     keywords: ['sports interaction', 'data analysis portal', 'strategic sports management', 'diamond exchange access', 'sports performance metrics india'],
     alternates: {
-        canonical: "https://www.daimondexch99.online/diamond-Exchange",
+        canonical: "https://www.daimondexch99.online/diamond-exchange",
     },
     openGraph: {
         title: 'Diamond Exchange | Professional Sports Management',
