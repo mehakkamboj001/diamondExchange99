@@ -10,7 +10,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 const siteConfig = {
   name: "Diamond Exchange99",
-  description: "Diamond Exchange99 is the world's leading sports exchange and betting platform. Established in 2003, providing secure and transparent gaming for cricket, football, and more.",
+  description: "Diamond Exchange99 is the world's leading sports exchange and betting platform. Established in 2025, providing secure and transparent gaming for cricket, football, and more.",
   url: "https://www.daimondexch99.online",
 };
 

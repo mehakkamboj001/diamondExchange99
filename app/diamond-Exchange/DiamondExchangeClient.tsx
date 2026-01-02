@@ -22,12 +22,13 @@ import {
     TableRow
 } from '@mui/material';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
-import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+import ShieldIcon from '@mui/icons-material/Shield';
 import SecurityIcon from '@mui/icons-material/Security';
 import PeopleIcon from '@mui/icons-material/People';
 import SupportAgentIcon from '@mui/icons-material/SupportAgent';
 import SportsEsportsIcon from '@mui/icons-material/SportsEsports';
-import CardGiftcardIcon from '@mui/icons-material/CardGiftcard';
+import AnalyticsIcon from '@mui/icons-material/Analytics';
+import VerifiedUserIcon from '@mui/icons-material/VerifiedUser';
 
 import Image from 'next/image';
 import { useWhatsApp } from '../../src/hooks/useWhatsApp';
@@ -137,7 +138,7 @@ export default function DiamondExchangeClient() {
             }}>
                 <Image
                     src="/images/hero.png"
-                    alt="Diamond Exchange Hero Background"
+                    alt="Diamond Exchange Sports Portal"
                     fill
                     priority
                     style={{ objectFit: 'cover', zIndex: 0 }}
@@ -150,10 +151,10 @@ export default function DiamondExchangeClient() {
                             fontSize: { xs: '2rem', sm: '3.5rem', md: '4.5rem' },
                             textShadow: '2px 2px 10px rgba(0,0,0,0.5)'
                         }}>
-                            Experience Ultimate Betting With <Box component="span" sx={{ color: '#e4b04a' }}>Diamond Exchange99</Box>
+                            Advanced Sports Interaction with <Box component="span" sx={{ color: '#e4b04a' }}>Diamond Exchange99</Box>
                         </Typography>
                         <Typography variant="h4" component="p" fontWeight="bold" sx={{ fontSize: { xs: '1.5rem', md: '2rem' }, color: '#fff', opacity: 0.9 }}>
-                            India's Premier 24/7 Gaming Destination
+                            India's Premier Digital Sports Analysis Destination
                         </Typography>
                         <Box sx={{ width: 120, height: 6, bgcolor: '#e4b04a', borderRadius: 3 }} aria-hidden="true" />
                         <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2} sx={{ mt: 2 }}>
@@ -161,17 +162,17 @@ export default function DiamondExchangeClient() {
                                 variant="contained"
                                 onClick={() => handleWhatsAppClick()}
                                 sx={{ bgcolor: '#e4b04a', color: '#000', fontWeight: 'bold', px: 4, py: 1.5, fontSize: '1.1rem', '&:hover': { bgcolor: '#c99a3b' } }}
-                                aria-label="Get your betting ID now"
+                                aria-label="Get your access pass now"
                             >
-                                Get Your ID Now
+                                Get Access Now
                             </Button>
                             <Button
                                 variant="outlined"
                                 onClick={() => handleWhatsAppClick()}
                                 sx={{ color: '#fff', borderColor: '#fff', px: 4, py: 1.5, fontSize: '1.1rem', '&:hover': { borderColor: '#e4b04a', color: '#e4b04a' } }}
-                                aria-label="Learn more about our services"
+                                aria-label="Explore platform solutions"
                             >
-                                Learn More
+                                Platform Overview
                             </Button>
                         </Stack>
                     </Stack>
@@ -184,23 +185,23 @@ export default function DiamondExchangeClient() {
                     <Grid container spacing={8} alignItems="center">
                         <Grid size={{ xs: 12, md: 7 }}>
                             <Typography variant="h3" fontWeight="900" gutterBottom sx={{ fontSize: { xs: '1.8rem', sm: '2.8rem', md: '3.5rem' }, color: '#e4b04a', mb: 4 }}>
-                                Welcome to Diamond Exchange ID: India's Trusted Betting Platform
+                                Welcome to Diamond Exchange: India's Trusted Performance Portal
                             </Typography>
                             <Typography variant="body1" sx={{ opacity: 0.9, lineHeight: 1.9, mb: 3, fontSize: { xs: '1.1rem', md: '1.25rem' } }}>
-                                In India, cricket is more than just a sport—it's a shared passion that brings millions together. At DiamondExchange99, we capture that thrill by providing the most reliable <b>Diamond Exchange ID</b> for events like the IPL and World Cup.
+                                At DiamondExchange99, we provide the most reliable <b>Digital Access Keys</b> for sports enthusiasts. Our platform is built for professional analysis and seamless sports interaction across all major global tournaments.
                             </Typography>
                             <Typography variant="body1" sx={{ opacity: 0.9, lineHeight: 1.9, mb: 4, fontStyle: 'italic' }}>
-                                "Join the community of winners and experience the adrenaline surge of live betting with our top-tier services."
+                                "Join the elite sports community and experience the power of real-time performance tracking with our premium services."
                             </Typography>
                             <Stack direction="row" spacing={4} sx={{ mt: 4 }}>
                                 <Box>
                                     <Typography variant="h5" fontWeight="bold" color="#e4b04a">100+</Typography>
-                                    <Typography variant="body2" sx={{ opacity: 0.7 }}>Betting Markets</Typography>
+                                    <Typography variant="body2" sx={{ opacity: 0.7 }}>Analysis Pools</Typography>
                                 </Box>
                                 <Divider orientation="vertical" flexItem sx={{ bgcolor: 'rgba(228, 176, 74, 0.3)' }} />
                                 <Box>
                                     <Typography variant="h5" fontWeight="bold" color="#e4b04a">Instant</Typography>
-                                    <Typography variant="body2" sx={{ opacity: 0.7 }}>Withdrawals</Typography>
+                                    <Typography variant="body2" sx={{ opacity: 0.7 }}>Settlements</Typography>
                                 </Box>
                                 <Divider orientation="vertical" flexItem sx={{ bgcolor: 'rgba(228, 176, 74, 0.3)' }} />
                                 <Box>
@@ -211,17 +212,17 @@ export default function DiamondExchangeClient() {
                         </Grid>
                         <Grid size={{ xs: 12, md: 5 }}>
                             <Box sx={{ p: 4, bgcolor: 'rgba(228, 176, 74, 0.05)', borderRadius: 8, border: '1px solid rgba(228, 176, 74, 0.2)' }}>
-                                <Typography variant="h5" fontWeight="bold" color="#e4b04a" gutterBottom>Why Choose Diamond Exchange99 ?</Typography>
+                                <Typography variant="h5" fontWeight="bold" color="#e4b04a" gutterBottom>Comprehensive Solutions</Typography>
                                 <Stack spacing={2} sx={{ mt: 3 }}>
                                     {[
-                                        'Multiple Registration Options (Phone, Email, Social)',
-                                        'Exclusive Mobile App for Android & iOS',
-                                        'Secure SSL Encrypted Transactions',
-                                        'International & Local Cricket Coverage',
-                                        'High Potential Payouts with Fair Wagering'
+                                        'Multiple Secure Access Options',
+                                        'Exclusive Responsive Mobile Portal',
+                                        'Secure SSL Encrypted Architecture',
+                                        'Global Sports Data Coverage',
+                                        'High Reliability & Technical Support'
                                     ].map((text) => (
                                         <Stack key={text} direction="row" spacing={2} alignItems="flex-start">
-                                            <CheckCircleIcon sx={{ color: '#e4b04a', mt: 0.5 }} />
+                                            <VerifiedUserIcon sx={{ color: '#e4b04a', mt: 0.5 }} />
                                             <Typography variant="body1">{text}</Typography>
                                         </Stack>
                                     ))}
@@ -242,29 +243,29 @@ export default function DiamondExchangeClient() {
                         <Grid size={{ xs: 12, sm: 6, md: 3 }}>
                             <StepCard
                                 number="01"
-                                title="Sign Up"
-                                desc="Visit our homepage and click 'Sign Up'. Enter your details and create a secure password."
+                                title="Registration"
+                                desc="Securely sign up with your credentials and create a unique profile on our portal."
                             />
                         </Grid>
                         <Grid size={{ xs: 12, sm: 6, md: 3 }}>
                             <StepCard
                                 number="02"
-                                title="Verify Account"
-                                desc="Validate your identity via the Personal Data section to ensure account safety and compliance."
+                                title="Verification"
+                                desc="Complete a simple identity check to ensure account security and compliance."
                             />
                         </Grid>
                         <Grid size={{ xs: 12, sm: 6, md: 3 }}>
                             <StepCard
                                 number="03"
-                                title="Add Funds"
-                                desc="Choose from multiple payment methods like UPI, Paytm, or Net Banking to deposit funds instantly."
+                                title="Account Funding"
+                                desc="Choose from multiple secure settlement methods to manage your sports portfolio."
                             />
                         </Grid>
                         <Grid size={{ xs: 12, sm: 6, md: 3 }}>
                             <StepCard
                                 number="04"
-                                title="Start Winning"
-                                desc="Pick your favorite sports, analyze the odds, and place your bets to start winning big."
+                                title="Live Interaction"
+                                desc="Access professional sports consoles and start your strategic analysis journey."
                             />
                         </Grid>
                     </Grid>
@@ -285,46 +286,46 @@ export default function DiamondExchangeClient() {
                 }} aria-hidden="true" />
                 <Container maxWidth="xl" sx={{ position: 'relative', zIndex: 1 }}>
                     <Typography variant="h3" component="h2" textAlign="center" fontWeight="900" color="#e4b04a" gutterBottom sx={{ mb: 8 }}>
-                        Professional Trading & Betting Solutions
+                        Professional Sports Management Services
                     </Typography>
 
                     <Grid container spacing={4}>
                         <Grid size={{ xs: 12, md: 4 }}>
                             <IDServiceCard
-                                btnText="Get Master ID"
-                                title="Master ID Provider"
-                                subtitle="Scale Your Betting Operations"
+                                btnText="Get Portal Entry"
+                                title="Master Account Provider"
+                                subtitle="Professional Resource Management"
                                 points={[
-                                    "India's leading trusted offline cricket master portal",
-                                    "Seamless self-deposit and 24/7 withdrawal systems",
-                                    "Direct user ID creation with profit sharing capability",
-                                    "Exclusive access to high-definition match streaming"
+                                    "India's leading trusted sports portal management",
+                                    "Seamless account settlements and 24/7 support",
+                                    "Direct sub-account generation and tracking",
+                                    "Exclusive high-definition match analysis streaming"
                                 ]}
                             />
                         </Grid>
                         <Grid size={{ xs: 12, md: 4 }}>
                             <IDServiceCard
-                                btnText="Get Super Master ID"
-                                title="Super Master ID"
-                                subtitle="The Ultimate Control Center"
+                                btnText="Get Super Access"
+                                title="Senior Portal Access"
+                                subtitle="Total Strategic Control"
                                 points={[
-                                    "Premier diamond exchange infrastructure in the country",
-                                    "Infinite capability for Master and User ID generation",
-                                    "Comprehensive live master account statement tracking",
-                                    "Lag-free real-time sports broadcasting integration"
+                                    "Premier sports exchange architecture management",
+                                    "Advanced capability for multi-tier account generation",
+                                    "Comprehensive real-time activity tracking consoles",
+                                    "Ultra-low latency sports data integration"
                                 ]}
                             />
                         </Grid>
                         <Grid size={{ xs: 12, md: 4 }}>
                             <IDServiceCard
-                                btnText="Get Agent ID"
-                                title="Premium Agent ID"
-                                subtitle="Build Your Online Cricket Hub"
+                                btnText="Get Agent Console"
+                                title="Agent Support Tools"
+                                subtitle="Infrastructure Solutions"
                                 points={[
-                                    "Consolidated Agent and Super Master dashboard",
-                                    "Priority placement in top-tier sports exchanges",
-                                    "State-of-the-art secure mobile apps for fantasy games",
-                                    "24/7 technical assistance for network management"
+                                    "Consolidated Agent and Admin control dashboards",
+                                    "Priority placement in top-tier sports networks",
+                                    "State-of-the-art secure mobile interfaces",
+                                    "24/7 expert technical assistance"
                                 ]}
                             />
                         </Grid>
@@ -352,28 +353,28 @@ export default function DiamondExchangeClient() {
                             <StatCard
                                 title="50 Lakh+"
                                 Icon={PeopleIcon}
-                                desc="Trusted Active Users"
+                                desc="Verified Community Members"
                             />
                         </Grid>
                         <Grid size={{ xs: 12, sm: 6, md: 3 }}>
                             <StatCard
                                 title="24*7"
                                 Icon={SupportAgentIcon}
-                                desc="Personalized Calling Support"
+                                desc="Expert Relationship Support"
                             />
                         </Grid>
                         <Grid size={{ xs: 12, sm: 6, md: 3 }}>
                             <StatCard
                                 title="Unlimited"
                                 Icon={SportsEsportsIcon}
-                                desc="Daily Games & Markets"
+                                desc="Strategic Sports Metrics"
                             />
                         </Grid>
                         <Grid size={{ xs: 12, sm: 6, md: 3 }}>
                             <StatCard
-                                title="Bonus Rewards"
-                                Icon={CardGiftcardIcon}
-                                desc="Exciting Sign-up Offers"
+                                title="Tiered Rewards"
+                                Icon={ShieldIcon}
+                                desc="Secure Incentives for Loyalty"
                             />
                         </Grid>
                     </Grid>
@@ -386,20 +387,20 @@ export default function DiamondExchangeClient() {
                     <Grid container spacing={8} alignItems="center">
                         <Grid size={{ xs: 12, md: 6 }}>
                             <Typography variant="h3" fontWeight="900" color="#e4b04a" gutterBottom sx={{ mb: 4 }}>
-                                Diverse Betting Markets
+                                Advanced Sports Analysis
                             </Typography>
                             <Typography variant="body1" color="rgba(255,255,255,0.7)" paragraph sx={{ mb: 6, fontSize: '1.1rem' }}>
-                                From predicting the match outcome to specific player milestones, we offer a comprehensive range of betting possibilities matched only by your knowledge of the game.
+                                From predicting match statistics to analyzing player trends, we offer a professional environment matched by your knowledge of the sports ecosystem.
                             </Typography>
 
                             <Grid container spacing={4}>
                                 {[
-                                    { t: 'Match Winner', d: 'Predict the victorious team.' },
-                                    { t: 'Top Batsman', d: 'Pick the leading run-scorer.' },
-                                    { t: 'Top Bowler', d: 'Predict the highest wicket-taker.' },
-                                    { t: 'Toss Result', d: 'Bet on the pre-match coin flip.' },
-                                    { t: 'Player Performance', d: 'Specific player-based milestones.' },
-                                    { t: 'Over/Under', d: 'Predict scores within specific ratios.' }
+                                    { t: 'Performance Analysis', d: 'Track victorious outcomes.' },
+                                    { t: 'Strategic Insights', d: 'Analyze leading metrics.' },
+                                    { t: 'Market Ratios', d: 'Predict sports trends.' },
+                                    { t: 'Pre-event Data', d: 'Analyze initial statistics.' },
+                                    { t: 'Professional Tools', d: 'Elite player tracking.' },
+                                    { t: 'Data Analytics', d: 'Compare historical performance.' }
                                 ].map((option) => (
                                     <Grid size={{ xs: 12, sm: 6 }} key={option.t}>
                                         <Stack spacing={1}>
@@ -424,8 +425,8 @@ export default function DiamondExchangeClient() {
                                     borderRadius: 4,
                                     display: { xs: 'none', md: 'block' }
                                 }}>
-                                    <Typography variant="h5" fontWeight="bold" color="#000">100% Safe</Typography>
-                                    <Typography variant="body2" color="#000">Certified Platform</Typography>
+                                    <Typography variant="h5" fontWeight="bold" color="#000">100% Secure</Typography>
+                                    <Typography variant="body2" color="#000">Verified Web Presence</Typography>
                                 </Box>
                             </Box>
                         </Grid>
@@ -438,10 +439,10 @@ export default function DiamondExchangeClient() {
                 <Container maxWidth="xl">
                     <Stack spacing={4} textAlign="center" sx={{ mb: 8 }}>
                         <Typography variant="h3" component="h2" fontWeight="900" color="#e4b04a">
-                            Diamond Exchange99 Gaming Experience
+                            Diamond Exchange Professional Ecosystem
                         </Typography>
                         <Typography variant="body1" sx={{ opacity: 0.8, fontSize: '1.2rem', maxWidth: 900, mx: 'auto' }}>
-                            Explore our comprehensive range of gaming options, from high-stakes casino games to real-time sports betting. We provide a seamless and immersive experience for all types of players.
+                            Explore our comprehensive range of sports metrics and interact with a seamless, immersive dashboard for all strategic enthusiasts.
                         </Typography>
                     </Stack>
 
@@ -452,23 +453,23 @@ export default function DiamondExchangeClient() {
                         boxShadow: '0 10px 40px rgba(0, 0, 0, 0.4)',
                         overflow: 'hidden'
                     }}>
-                        <Table aria-label="Gaming Categories and Popular Markets">
+                        <Table aria-label="Professional Data Categories">
                             <TableHead>
                                 <TableRow sx={{ bgcolor: 'rgba(228, 176, 74, 0.1)' }}>
                                     <TableCell sx={{ color: '#e4b04a', fontWeight: 'bold', fontSize: '1.2rem', py: 3, borderBottom: '1px solid rgba(228, 176, 74, 0.2)' }}>
-                                        Gaming Category
+                                        Platform Category
                                     </TableCell>
                                     <TableCell sx={{ color: '#e4b04a', fontWeight: 'bold', fontSize: '1.2rem', py: 3, borderBottom: '1px solid rgba(228, 176, 74, 0.2)' }}>
-                                        Popular Games & Markets
+                                        Interactive Data Modules
                                     </TableCell>
                                 </TableRow>
                             </TableHead>
                             <TableBody>
                                 {[
-                                    { type: 'Casino', games: 'Roulette, Teen Patti, Poker, Baccarat, Blackjack, Dragon Tiger' },
-                                    { type: 'Live Betting', games: 'Real-time Match Odds, Ball-by-Ball Session, In-play Markets' },
-                                    { type: 'Global Coverage', games: 'IPL, World Cup, EPL, Champions League, NBA, Grand Slams' },
-                                    { type: 'Sports', games: 'Cricket, Football, Tennis, Horse Racing, Kabaddi, Greyhounds' }
+                                    { type: 'Strategic Interaction', games: 'Live Analysis, Match Performance, Multi-Tier Statistics' },
+                                    { type: 'Data Streams', games: 'Real-time Analytics, Ball-by-Ball Data, Strategic Trends' },
+                                    { type: 'Global Metrics', games: 'International Sports Data, Global Tournament Performance' },
+                                    { type: 'Sports Analysis', games: 'Cricket, Football, Tennis, Global Strategic Networks' }
                                 ].map((row, index) => (
                                     <TableRow key={row.type} sx={{
                                         '&:hover': { bgcolor: 'rgba(255, 255, 255, 0.02)' },
@@ -504,34 +505,34 @@ export default function DiamondExchangeClient() {
                 <Container maxWidth="xl">
                     <Stack spacing={4} textAlign="center" maxWidth={900} sx={{ mx: 'auto', mb: 8 }}>
                         <SecurityIcon sx={{ fontSize: 60, color: '#e4b04a', alignSelf: 'center' }} aria-hidden="true" />
-                        <Typography variant="h3" component="h2" fontWeight="900" color="#e4b04a">Compromise-Free Security</Typography>
+                        <Typography variant="h3" component="h2" fontWeight="900" color="#e4b04a">Secure Global Compliance</Typography>
                         <Typography variant="body1" sx={{ opacity: 0.8, fontSize: '1.2rem' }}>
-                            We operate under a strict Curacao license, ensuring that every interaction on our platform is transparent and legally compliant. Our mandatory KYC process is designed to protect users from intruders and maintain a fair play atmosphere.
+                            We operate under strict international standards, ensuring that every interaction on our portal is transparent and secure. Our robust verification process is designed to protect all members and maintain an elite atmosphere.
                         </Typography>
                     </Stack>
 
                     <Grid container spacing={4}>
                         <Grid size={{ xs: 12, md: 4 }}>
                             <Paper component="article" sx={{ p: 4, bgcolor: 'rgba(255,255,255,0.02)', height: '100%', borderRadius: 6, border: '1px solid rgba(255,255,255,0.05)' }}>
-                                <Typography variant="h5" component="h3" fontWeight="bold" color="#e4b04a" gutterBottom>Rapid Payments</Typography>
+                                <Typography variant="h5" component="h3" fontWeight="bold" color="#e4b04a" gutterBottom>Rapid Management</Typography>
                                 <Typography variant="body1" sx={{ opacity: 0.7 }}>
-                                    Experience the most convenient payment ecosystem in India. From traditional Net Banking to modern Cryptocurrencies, our withdrawals are processed with unmatched speed.
+                                    Experience the most efficient account management ecosystem. From traditional banking support to modern settlement systems, our portal is unparalleled.
                                 </Typography>
                             </Paper>
                         </Grid>
                         <Grid size={{ xs: 12, md: 4 }}>
                             <Paper component="article" sx={{ p: 4, bgcolor: 'rgba(255,255,255,0.02)', height: '100%', borderRadius: 6, border: '1px solid rgba(255,255,255,0.05)' }}>
-                                <Typography variant="h5" component="h3" fontWeight="bold" color="#e4b04a" gutterBottom>Fair Wagering</Typography>
+                                <Typography variant="h5" component="h3" fontWeight="bold" color="#e4b04a" gutterBottom>Fair Interaction</Typography>
                                 <Typography variant="body1" sx={{ opacity: 0.7 }}>
-                                    Transparency is our core value. Our wagering requirements are designed to be fair and achievable, giving you a real shot at converting your bonuses into winnings.
+                                    Transparency is our core value. Our service requirements are designed to be fair and ethical, providing you a real professional sports analysis experience.
                                 </Typography>
                             </Paper>
                         </Grid>
                         <Grid size={{ xs: 12, md: 4 }}>
                             <Paper component="article" sx={{ p: 4, bgcolor: 'rgba(255,255,255,0.02)', height: '100%', borderRadius: 6, border: '1px solid rgba(255,255,255,0.05)' }}>
-                                <Typography variant="h5" component="h3" fontWeight="bold" color="#e4b04a" gutterBottom>Live Interaction</Typography>
+                                <Typography variant="h5" component="h3" fontWeight="bold" color="#e4b04a" gutterBottom>Live Console</Typography>
                                 <Typography variant="body1" sx={{ opacity: 0.7 }}>
-                                    Switch seamlessly between local championships and international tournaments. Our platform offers a dynamic, real-time interface that keeps you in the heat of the action.
+                                    Switch seamlessly between national championships and global tournaments. Our console offers a dynamic, real-time interface for data enthusiasts.
                                 </Typography>
                             </Paper>
                         </Grid>
@@ -555,7 +556,7 @@ export default function DiamondExchangeClient() {
                 }}
                 onClick={() => handleWhatsAppClick()}
                 disabled={!activeWhatsAppNumber || loading}
-                aria-label="Chat with us on WhatsApp"
+                aria-label="Contact Platform Support"
             >
                 <WhatsAppIcon sx={{ fontSize: { xs: 24, md: 32 } }} />
             </Fab>
