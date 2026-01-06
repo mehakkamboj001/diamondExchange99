@@ -25,7 +25,9 @@ export const metadata: Metadata = {
   },
   description: siteConfig.description,
   keywords: [
-    "Diamond Exchange",
+    "DiamondExchange",
+    "DiamondExchange99",
+    "DiamondExch99",
     "Cricket Betting ID",
     "Sports Exchange",
     "Online Betting India",
@@ -38,14 +40,48 @@ export const metadata: Metadata = {
   authors: [
     {
       name: "Diamond Exchange Team",
-      url: "https://www.daimondexch99.online",
+      url: siteConfig.url,
     },
   ],
   creator: "Diamond Exchange Team",
-  icons: {
-    icon: "/favicon.ico",
+  publisher: "Diamond Exchange Team",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
   },
-  manifest: `/site.webmanifest`,
+  alternates: {
+    canonical: siteConfig.url,
+  },
+  openGraph: {
+    title: siteConfig.name,
+    description: siteConfig.description,
+    url: siteConfig.url,
+    siteName: siteConfig.name,
+    images: [
+      {
+        url: `${siteConfig.url}/images/hero.png`,
+        width: 1200,
+        height: 630,
+        alt: siteConfig.name,
+      },
+    ],
+    locale: "en_IN",
+    type: "website",
+  },
+  icons: {
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/images/logo.png", sizes: "32x32", type: "image/png" },
+      { url: "/images/logo.png", sizes: "16x16", type: "image/png" },
+    ],
+    apple: [
+      { url: "/images/logo.png", sizes: "180x180", type: "image/png" },
+    ],
+    shortcut: "/images/logo.png",
+  },
+  manifest: "/site.webmanifest",
+  category: "Sports & Betting",
 };
 
 const jsonLd = {
