@@ -12,15 +12,22 @@ export default function Footer() {
     const linkSections = [
         {
             title: 'Our Partners',
-            links: ["A", "B", "C"]
+            links: [
+                { name: 'A', path: '#' },
+            ]
         },
         {
-            title: 'Top Betting Links',
-            links: []
+            title: 'Quick Links',
+            links: [
+                { name: 'Terms & Conditions', path: '/terms-and-conditions' },
+                { name: 'Privacy Policy', path: '/privacy-policy' },
+            ]
         },
         {
-            title: 'Sports links',
-            links: []
+            title: 'Sports Links',
+            links: [
+                { name: 'Cricket', path: '#' },
+            ]
         }
     ];
 
@@ -80,18 +87,18 @@ export default function Footer() {
                             </Typography>
                             <Stack spacing={1.5} component="ul" sx={{ listStyle: 'none', p: 0, m: 0 }}>
                                 {section.links.map((link) => (
-                                    <Box component="li" key={link}>
+                                    <Box component="li" key={link.name}>
                                         <Link
-                                            href="#"
+                                            href={link.path}
                                             style={{
                                                 color: 'rgba(255,255,255,0.7)',
                                                 textDecoration: 'none',
                                                 fontSize: '14px',
                                                 transition: 'all 0.2s ease'
                                             }}
-                                            title={`Go to ${link}`}
+                                            title={`Go to ${link.name}`}
                                         >
-                                            {link}
+                                            {link.name}
                                         </Link>
                                     </Box>
                                 ))}

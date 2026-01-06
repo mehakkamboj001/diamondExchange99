@@ -1,10 +1,10 @@
 'use client';
 import React from 'react';
 import { Box, Container, Typography, Paper, Divider, Stack } from '@mui/material';
-import SecurityIcon from '@mui/icons-material/Security';
-import LockIcon from '@mui/icons-material/Lock';
+import GavelIcon from '@mui/icons-material/Gavel';
+import WarningIcon from '@mui/icons-material/Warning';
 
-export default function PrivacyPolicy() {
+export default function TermsAndConditions() {
     return (
         <Box sx={{ bgcolor: '#0b0d17', minHeight: '100vh', py: { xs: 8, md: 12 }, color: '#fff' }}>
             <Container maxWidth="md">
@@ -19,26 +19,31 @@ export default function PrivacyPolicy() {
                     }}
                 >
                     <Stack direction="row" spacing={2} alignItems="center" sx={{ mb: 4 }}>
-                        <SecurityIcon sx={{ color: '#e4b04a', fontSize: 40 }} />
+                        <GavelIcon sx={{ color: '#e4b04a', fontSize: 40 }} />
                         <Typography variant="h3" fontWeight="900" sx={{ color: '#e4b04a' }}>
-                            Privacy Policy
+                            Terms & Conditions
                         </Typography>
                     </Stack>
 
-                    <Box sx={{ mb: 6, p: 3, bgcolor: 'rgba(255, 255, 255, 0.05)', borderRadius: 4, display: 'flex', alignItems: 'center', gap: 2 }}>
-                        <LockIcon sx={{ color: '#e4b04a' }} />
-                        <Typography variant="body1" sx={{ opacity: 0.9 }}>
-                            Your privacy and data security are our top priorities. We use military-grade encryption to protect your information.
+                    <Box sx={{ mb: 6, p: 3, bgcolor: 'rgba(228, 176, 74, 0.1)', borderRadius: 4, border: '1px solid #e4b04a' }}>
+                        <Stack direction="row" spacing={2} alignItems="flex-start">
+                            <WarningIcon sx={{ color: '#e4b04a', mt: 0.5 }} />
+                            <Typography variant="h6" fontWeight="bold" color="#e4b04a">
+                                AGE RESTRICTION: 18+ ONLY
+                            </Typography>
+                        </Stack>
+                        <Typography variant="body1" sx={{ mt: 1, opacity: 0.9 }}>
+                            By using this platform, you certify that you are at least 18 years of age. Sports analysis and strategic interaction involve financial risk and can be addictive. Please play responsibly.
                         </Typography>
                     </Box>
 
                     <Stack spacing={4}>
                         <section>
                             <Typography variant="h5" fontWeight="bold" gutterBottom color="#e4b04a">
-                                1. Information Collection
+                                1. Acceptance of Terms
                             </Typography>
                             <Typography variant="body1" sx={{ opacity: 0.7, lineHeight: 1.8 }}>
-                                We collect information necessary to provide a secure sports analysis experience, including registration details, device information, and transaction history.
+                                By accessing or using Diamond Exchange99, you agree to be bound by these Terms and Conditions. If you do not agree to all terms, you must not use our services.
                             </Typography>
                         </section>
 
@@ -46,14 +51,10 @@ export default function PrivacyPolicy() {
 
                         <section>
                             <Typography variant="h5" fontWeight="bold" gutterBottom color="#e4b04a">
-                                2. Use of Data
+                                2. User Accounts
                             </Typography>
                             <Typography variant="body1" sx={{ opacity: 0.7, lineHeight: 1.8 }}>
-                                Your data is used to:
-                                <br />• Provide and improve our services
-                                <br />• Verify identity and prevent fraud
-                                <br />• Process settlements and withdrawals
-                                <br />• Send important platform updates
+                                Users are responsible for maintaining the confidentiality of their account details. Any activity under your account is your sole responsibility. Multiple accounts per user are strictly prohibited and may lead to permanent suspension.
                             </Typography>
                         </section>
 
@@ -61,10 +62,10 @@ export default function PrivacyPolicy() {
 
                         <section>
                             <Typography variant="h5" fontWeight="bold" gutterBottom color="#e4b04a">
-                                3. Data Protection
+                                3. Strategic Fair Play
                             </Typography>
                             <Typography variant="body1" sx={{ opacity: 0.7, lineHeight: 1.8 }}>
-                                We implement industry-leading security measures, including SSL encryption and secure firewalls, to protect your personal information from unauthorized access or disclosure.
+                                Any form of manual or automated manipulation, including bot usage or coordinated activity, is strictly forbidden. We reserve the right to audit accounts and void transactions if unfair practices are detected.
                             </Typography>
                         </section>
 
@@ -72,10 +73,10 @@ export default function PrivacyPolicy() {
 
                         <section>
                             <Typography variant="h5" fontWeight="bold" gutterBottom color="#e4b04a">
-                                4. Third-Party Sharing
+                                4. Settlements and Withdrawals
                             </Typography>
                             <Typography variant="body1" sx={{ opacity: 0.7, lineHeight: 1.8 }}>
-                                We do not sell or rent your personal information to third parties. Data may only be shared with trusted technical partners to ensure platform stability and payment processing, or as required by law.
+                                Withdrawals are processed according to our standard internal timelines. Users must ensure all registration details are accurate to avoid delays. Technical errors in data feeds will be handled according to our standard dispute resolution protocol.
                             </Typography>
                         </section>
 
@@ -83,10 +84,10 @@ export default function PrivacyPolicy() {
 
                         <section>
                             <Typography variant="h5" fontWeight="bold" gutterBottom color="#e4b04a">
-                                5. Cookie Policy
+                                5. Responsible Gaming
                             </Typography>
                             <Typography variant="body1" sx={{ opacity: 0.7, lineHeight: 1.8 }}>
-                                We use cookies to enhance your browsing experience and remember your preferences. You can manage cookie settings through your browser options.
+                                Diamond Exchange99 promotes responsible sports interaction. We provide tools for self-exclusion and limit setting. If you feel your sports analysis activities are becoming problematic, please seek professional assistance.
                             </Typography>
                         </section>
 
@@ -94,17 +95,17 @@ export default function PrivacyPolicy() {
 
                         <section>
                             <Typography variant="h5" fontWeight="bold" gutterBottom color="#e4b04a">
-                                6. Contact Us
+                                6. Governing Law
                             </Typography>
                             <Typography variant="body1" sx={{ opacity: 0.7, lineHeight: 1.8 }}>
-                                If you have any questions regarding your privacy or data usage, please contact our support team through the official WhatsApp channel.
+                                These terms are governed by international standards of sports data interaction and local regulations where applicable.
                             </Typography>
                         </section>
                     </Stack>
 
                     <Box sx={{ mt: 8, textAlign: 'center', opacity: 0.5 }}>
                         <Typography variant="body2">
-                            © 2026 Diamond Exchange99 | Secure Data Architecture
+                            Last Updated: January 2026
                         </Typography>
                     </Box>
                 </Paper>
