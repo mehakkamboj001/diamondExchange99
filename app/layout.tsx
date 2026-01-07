@@ -25,16 +25,15 @@ export const metadata: Metadata = {
   },
   description: siteConfig.description,
   keywords: [
-    "DiamondExchange",
-    "DiamondExchange99",
-    "DiamondExch99",
+    "Cricket Betting India",
+    "Diamond Exchange",
     "Cricket Betting ID",
-    "Sports Exchange",
     "Online Betting India",
     "Diamond Exchange Official",
     "Betting ID WhatsApp",
-    "Daimond Exchange 99",
-    "Cricket Betting India",
+    "DiamondExchange",
+    "DiamondExchange99",
+    "DiamondExch99",
     "Online Betting ID"
   ],
   authors: [

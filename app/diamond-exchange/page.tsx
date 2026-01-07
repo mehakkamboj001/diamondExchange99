@@ -2,15 +2,25 @@ import type { Metadata } from 'next';
 import DiamondExchangeClient from './DiamondExchangeClient';
 
 export const metadata: Metadata = {
-    title: 'Diamond Exchange99 | Secure Sports Analysis & Portal Access',
-    description: 'Get your official Diamond Exchange access key instantly. Join India\'s most trusted sports analysis platform with secure settlements, 24/7 support, and elite performance tracking.',
-    keywords: ['sports interaction', 'data analysis portal', 'strategic sports management', 'diamond exchange access', 'sports performance metrics india'],
+    title: 'Diamond Exchange99 - Official Cricket ID Provider in India',
+    description: 'Looking for a Diamond Exchange ID? Join Diamond Exchange99, India\'s most trusted Cricket Betting India platform. Instant IDs, secure settlements, and 24/7 support.',
+    keywords: [
+        'Diamond Exchange99',
+        'Diamond Exchange ID',
+        'Cricket Betting India',
+        'Online Betting ID India',
+        'Best Cricket Betting Site',
+        'Betting ID WhatsApp',
+        'Cricket Exchange India',
+        'Live Cricket Betting',
+        'Diamond Exchange Official'
+    ],
     alternates: {
         canonical: "https://www.daimondexch99.online/diamond-exchange",
     },
     openGraph: {
-        title: 'Diamond Exchange | Professional Sports Management',
-        description: 'Global leader in sports analysis and strategic data interaction. Secure, fast, and transparent.',
+        title: 'Cricket Betting India - Diamond Exchange99 Official',
+        description: 'India\'s most trusted platform for Cricket Betting. Secure, fast, and transparent exchange with 24/7 support.',
     },
 };
 

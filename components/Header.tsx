@@ -117,7 +117,7 @@ export default function Header() {
                                 px: 2,
                                 display: 'inline-block'
                             }}>
-                                • Start With Us • Join India's Most Trusted Sports Exchange • 24/7 Withdrawals Available
+                                • Diamond Exchange99: India's Trusted Sports Site • Get Your Official Cricket ID Now • 24/7 Secure Withdrawals
                             </Box>
                             <style>{`
                                 @keyframes marquee {

@@ -66,7 +66,7 @@ export default function Footer() {
                             DIAMOND <Box component="span" sx={{ color: '#e4b04a' }}>EXCHANGE99</Box>
                         </Typography>
                         <Typography variant="body2" sx={{ opacity: 0.6, mb: 3, lineHeight: 1.8, fontSize: '0.9rem' }}>
-                            Diamond Exchange99 is the world's leading sports exchange and betting platform. Established in 2003, providing secure and transparent gaming.
+                            Diamond Exchange99 is the world's leading sports exchange. Providing secure and transparent online Cricket IDs for Indian users since 2025.
                         </Typography>
                         <Stack direction="row" spacing={1.5}>
                             <IconButton
